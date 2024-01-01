@@ -7,12 +7,13 @@ import math
 
 class handDetector():
     def __init__(self, mode=False, maxHands = 1, detectionCon = 0, trackCon= 0):
+        #
         self.mode = mode
+        # maxHands là số bàn tay sẽ nhận diện trong khung hình mặc định là 1 thì sẽ nhận diện 1 bàn tay
         self.maxHands = maxHands
         self.detectionCon = detectionCon
         self.trackCon = trackCon
 
-        # Cho phép nhận diện bàn tay trong hình ảnh, Video
         self.mpHands = mp.solutions.hands
         self.hands = self.mpHands.Hands(self.mode, self.maxHands,
                                         self.detectionCon, self.trackCon)

@@ -3,15 +3,15 @@ import numpy as np
 import HandTrackingModule as htm
 import autopy
 
-# Chieu cao va chieu dai cua Camera
+# Chiều dài và chiều cao của Camera
 wCam = 1920
 hCam = 1080
-# Khung hinh
+# Khung hình
 frameR = 100
-# Do muot
+# Độ mượt
 smoothening = 6
 
-# Dat chieu cao va chieu rong cho Camera
+# Đặt chiều dài và chiều rộng cho Camera
 camera = cv2.VideoCapture(0)
 camera.set(3, wCam)
 camera.set(4, hCam)
